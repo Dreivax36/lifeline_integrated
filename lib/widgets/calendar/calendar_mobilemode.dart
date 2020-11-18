@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lifeline_integrated/config/palette.dart';
 import 'package:lifeline_integrated/widgets/custom_app_bar.dart';
 import 'package:lifeline_integrated/widgets/screen_size.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -64,6 +66,148 @@ SliverToBoxAdapter _buildCalendar(double screenHeight, double screenWidth, _cont
             CustomAppBar(),
             //ScreenSize.isDesktop(context) ? SizedBox(height: screenHeight * 0.02) : SizedBox(height: screenHeight * 0.07),
             TableCalendar(calendarController: _controller,),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 15),
+                child: IconButton(
+                  icon: Icon(
+                      Icons.keyboard_arrow_up_outlined,
+                      size: 50,
+                  ),
+                  onPressed: () {},
+                ),
+              ),
+            ),
+            Container(
+              width: screenWidth,
+              height: screenHeight * 0.85,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(25.0),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(0,0),
+                    blurRadius: 5,
+                    color: Colors.black54,
+                  ),
+                ],
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Container(
+                      width: screenWidth,
+                      height: screenHeight * 0.1,
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(160, 225, 149, 1),
+                        borderRadius: BorderRadius.circular(25.0),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0,0),
+                            blurRadius: 5,
+                            color: Colors.black54,
+                          ),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'SYMPTOMS',
+                                  style: const TextStyle(
+                                    fontFamily: 'Roboto',
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: 21,
+                                    color: Colors.black,
+                                  ),
+                                  textAlign: TextAlign.start,
+                                ),
+
+                                Container(
+                                  width: 40,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(25.0),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        offset: Offset(0,0),
+                                        blurRadius: 5,
+                                        color: Colors.black54,
+                                      ),
+                                    ],
+                                  ),
+                                  child: IconButton(
+                                    icon: Icon(Icons.more_horiz_rounded),
+                                    onPressed: () {},
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Text(
+                              'No COVID-19 Symptoms Found',
+                              style: const TextStyle(
+                                fontFamily: 'Monserrat',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 21,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'Engagements',
+                              style: const TextStyle(
+                                fontFamily: 'Roboto',
+                                fontWeight: FontWeight.w900,
+                                fontSize: 21,
+                                color: Colors.black,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5),
+                          child: Center(
+                            child: Text(
+                              'No Current Engagements',
+                              style: const TextStyle(
+                                fontFamily: 'Monserrat',
+                                fontWeight: FontWeight.w700,
+                                fontSize: 17,
+                                color: Colors.grey,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
         //ScreenSize.isDesktop(context) ? SizedBox(height: screenHeight * 0) : CustomAppBar(),

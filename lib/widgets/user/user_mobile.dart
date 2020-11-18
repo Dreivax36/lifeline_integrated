@@ -36,6 +36,8 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
   String image = 'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80';
   return SliverToBoxAdapter(
     child: Container(
+      width: screenWidth,
+      height: screenHeight,
       decoration: BoxDecoration(
         gradient: Palette.BackgroundGradientTD,
       ),
@@ -46,10 +48,17 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                 padding: const EdgeInsets.all(10.0),
                 child: Container(
                   width: screenWidth * 0.95,
-                  height: screenHeight * 0.9,
+                  height: screenHeight * 0.85,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(25.0),
+                    borderRadius: BorderRadius.circular(15.0),
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(0,0),
+                        blurRadius: 5,
+                        color: Colors.black54,
+                      ),
+                    ],
                   ),
                   child: Column(
                     children: [
@@ -82,8 +91,15 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                         height: screenHeight * 0.15,
                         width: screenWidth * 0.9,
                         decoration: BoxDecoration(
-                          color: Colors.black12,
+                          color: Color.fromRGBO(135, 201, 231, 1),
                           borderRadius: BorderRadius.circular(25.0),
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(0,2),
+                              blurRadius: 1,
+                              color: Colors.black54,
+                            ),
+                          ],
                         ),
                         child: Row(
                           children: [
@@ -99,7 +115,7 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                               padding: const EdgeInsets.symmetric(vertical: 15.0),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +125,7 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                                         style: const TextStyle(
                                           fontFamily: 'Monserrat',
                                           fontWeight: FontWeight.w800,
-                                          fontSize: 20,
+                                          fontSize: 25,
                                           color: Colors.black,
                                         ),
                                       ),
@@ -118,7 +134,7 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                                         style: const TextStyle(
                                           fontFamily: 'Monserrat',
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 15,
+                                          fontSize: 17,
                                           color: Colors.black,
                                         ),
                                       ),
@@ -131,7 +147,7 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                                         style: const TextStyle(
                                           fontFamily: 'Monserrat',
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 14,
+                                          fontSize: 15,
                                           color: Colors.black,
                                         ),
                                       ),
@@ -228,7 +244,7 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                         ],
                       ),
                       Container(
-                        height: screenHeight * 0.1,
+                        height: screenHeight * 0.07,
                         width: screenWidth * 0.9,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -241,77 +257,243 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                             ),
                           ],
                         ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Last Name',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  Text(
+                                    'BONDAD',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'First Name',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  Text(
+                                    'Duane Xavier',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ],
+                              ),
+
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'M.I.',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  Text(
+                                    'M',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ],
+                              ),
+
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Suffix',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  Text(
+                                    'N/A',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                                  child: Text(
-                                    'Age:',
-                                    style: const TextStyle(
-                                      fontFamily: 'Monserrat',
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 18,
-                                      color: Colors.black,
-                                    ),
-                                    textAlign: TextAlign.start,
-                                  ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 5),
+                              child: Text(
+                                'Person Details:',
+                                style: const TextStyle(
+                                  fontFamily: 'Monserrat',
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 18,
+                                  color: Colors.black,
                                 ),
-                                Container(
-                                  height: screenHeight * 0.1,
-                                  width: screenWidth * 0.435,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(20.0),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        offset: Offset(0,2),
-                                        blurRadius: 3,
-                                        color: Colors.black54,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                textAlign: TextAlign.start,
+                              ),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                                  child: Text(
-                                    'Gender:',
-                                    style: const TextStyle(
-                                      fontFamily: 'Monserrat',
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 18,
-                                      color: Colors.black,
+                            Container(
+                              height: screenHeight * 0.065,
+                              width: screenWidth * 0.9,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20.0),
+                                boxShadow: [
+                                  BoxShadow(
+                                    offset: Offset(0,2),
+                                    blurRadius: 3,
+                                    color: Colors.black54,
+                                  ),
+                                ],
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text(
+                                              'Age:',
+                                              style: const TextStyle(
+                                                fontFamily: 'Monserrat',
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 15,
+                                                color: Colors.black,
+                                              ),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            SizedBox(width: 10.0),
+                                            Text(
+                                              '21',
+                                              style: const TextStyle(
+                                                fontFamily: 'Monserrat',
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 17,
+                                                color: Colors.black,
+                                              ),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              'Birthday:',
+                                              style: const TextStyle(
+                                                fontFamily: 'Monserrat',
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 15,
+                                                color: Colors.black,
+                                              ),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            SizedBox(width: 10.0),
+                                            Text(
+                                              'June 6, 1999',
+                                              style: const TextStyle(
+                                                fontFamily: 'Monserrat',
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 17,
+                                                color: Colors.black,
+                                              ),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ],
+                                        ),
+                                      ],
                                     ),
-                                    textAlign: TextAlign.start,
-                                  ),
+
+
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'Gender:',
+                                          style: const TextStyle(
+                                            fontFamily: 'Monserrat',
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 15,
+                                            color: Colors.black,
+                                          ),
+                                          textAlign: TextAlign.start,
+                                        ),
+                                        SizedBox(width: 10.0),
+                                        Text(
+                                          'Male',
+                                          style: const TextStyle(
+                                            fontFamily: 'Monserrat',
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 17,
+                                            color: Colors.black,
+                                          ),
+                                          textAlign: TextAlign.start,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                Container(
-                                  height: screenHeight * 0.1,
-                                  width: screenWidth * 0.435,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(20.0),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        offset: Offset(0,2),
-                                        blurRadius: 3,
-                                        color: Colors.black54,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                              ),
                             ),
                           ],
                         ),
@@ -336,7 +518,7 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                         ],
                       ),
                       Container(
-                        height: screenHeight * 0.1,
+                        height: screenHeight * 0.12,
                         width: screenWidth * 0.9,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -348,6 +530,226 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                               color: Colors.black54,
                             ),
                           ],
+                        ),
+
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Email:',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      SizedBox(width: 10.0),
+                                      Text(
+                                        'dxbondad36@gmail.com',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 17,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Phone Number:',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      SizedBox(width: 10.0),
+                                      Text(
+                                        '+639464013144',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 17,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+
+                              Column(
+                                children: [
+                                  Text(
+                                    'Link Accounts:',
+                                    style: const TextStyle(
+                                      fontFamily: 'Monserrat',
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  SizedBox(height: 5.0),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Container(
+                                        height: 30.0,
+                                        width: screenWidth * .25,
+                                        color: Colors.transparent,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              color: Colors.black12,
+                                              borderRadius: BorderRadius.circular(5.0)
+                                          ),
+                                          //child: Center(
+                                          child: FlatButton(
+                                            onPressed: () {},
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: <Widget>[
+                                                Padding(
+                                                  padding: const EdgeInsets.fromLTRB(
+                                                      0, 8, 0, 8),
+                                                  //child: Center(
+                                                  child: ImageIcon(
+                                                    AssetImage(
+                                                        'assets/images/facebook-64.png'
+                                                    ),
+                                                    size: 18,
+                                                  ),
+                                                  //),
+                                                ),
+                                                SizedBox(width: screenWidth * .029),
+                                                Text(
+                                                  'Facebook',
+                                                  style: TextStyle(
+                                                    fontSize: 13,
+                                                    fontFamily: 'Roboto',
+                                                    fontWeight: FontWeight.w300,
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          //),
+                                        ),
+                                      ),
+                                      SizedBox(width: 10.0),
+                                      Container(
+                                        height: 30.0,
+                                        width: screenWidth * .25,
+                                        color: Colors.transparent,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              color: Colors.black12,
+                                              borderRadius: BorderRadius.circular(5.0)
+                                          ),
+                                          child: Center(
+                                            child: FlatButton(
+                                              onPressed: () {},
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: <Widget>[
+                                                  Padding(
+                                                    padding: const EdgeInsets.fromLTRB(
+                                                        2, 8, 0, 8),
+                                                    child: Center(
+                                                      child: ImageIcon(
+                                                        AssetImage(
+                                                          'assets/images/google.png',
+                                                        ),
+                                                        size: 18,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(width: screenWidth * .029),
+                                                  Text(
+                                                    'Twitter',
+                                                    style: TextStyle(
+                                                      fontSize: 13,
+                                                      fontFamily: 'Roboto',
+                                                      fontWeight: FontWeight.w300,
+                                                      color: Colors.black,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+
+                                      SizedBox(width: 10.0),
+                                      Container(
+                                        height: 30.0,
+                                        width: screenWidth * .25,
+                                        color: Colors.transparent,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              color: Colors.black12,
+                                              borderRadius: BorderRadius.circular(5.0)
+                                          ),
+                                          child: Center(
+                                            child: FlatButton(
+                                              onPressed: () {},
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: <Widget>[
+                                                  Padding(
+                                                    padding: const EdgeInsets.fromLTRB(
+                                                        2, 8, 0, 8),
+                                                    child: Center(
+                                                      child: ImageIcon(
+                                                        AssetImage(
+                                                          'assets/images/google.png',
+                                                        ),
+                                                        size: 18,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(width: screenWidth * .029),
+                                                  Text(
+                                                    'Google',
+                                                    style: TextStyle(
+                                                      fontSize: 13,
+                                                      fontFamily: 'Roboto',
+                                                      fontWeight: FontWeight.w300,
+                                                      color: Colors.black,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+
+
+
+
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Row(
@@ -368,7 +770,7 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                         ],
                       ),
                       Container(
-                        height: screenHeight * 0.1,
+                        height: screenHeight * 0.11,
                         width: screenWidth * 0.9,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -380,6 +782,153 @@ SliverToBoxAdapter _qr(double screenHeight, double screenWidth){
                               color: Colors.black54,
                             ),
                           ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Address (Optional)',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        'B4 L2 Narra St. St. Paul Subdivision',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Barangay',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        'Palestina',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'City/Municipality',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        'Pili',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Region',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        'Bicol Region',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+
+
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Zip Code',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        '4418',
+                                        style: const TextStyle(
+                                          fontFamily: 'Monserrat',
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
