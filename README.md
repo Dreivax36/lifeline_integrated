@@ -1,16 +1,15 @@
-# lifeline_integrated
+# Lifeline COVID-19 Contact Tracing Application
 
-A new Flutter application.
+This is a a flutter project that is focused on creating a contact tracing application.
+The Application is suitable and coded wo work both for desktop and mobile applications.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. This is just a UI Design of the main screens for both the Mobile and Desktop Applications. 
+2. It needs to be cleaned. By cleaned, removing redundant codes by making classes and etc.
+3. Create the Home Page for all the users to see without logging in. i.e Getting Started, How It Works, Registration Page (both for Users and Establishments)
+4. Currently there is no UI design for the following pages mentioned above.
+5. If you can polish the current UI Design do so. But it would be much better to focus on the non-existent ones.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## NOTE
+DO NOT Replace this Master File.
