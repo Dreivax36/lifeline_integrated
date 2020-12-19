@@ -1,12 +1,12 @@
 # UPDATES
-Added feature and visual fixes
+Added new features and visual fixes
 
-## Register screens
+### Register screens
 - added the initial visual screens for registration
-## QR tab
+### QR tab
 - added a qr scanner
 - added a qr generator
 - some visual improvements
 
-## NOTE
+### NOTE
 qr screen can be improved
