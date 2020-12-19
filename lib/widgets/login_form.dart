@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lifeline_integrated/config/palette.dart';
 import 'package:lifeline_integrated/screens/nav_screen.dart';
+import 'package:lifeline_integrated/screens/registration_screen.dart';
+import 'package:lifeline_integrated/widgets/registration_form.dart';
 import 'package:lifeline_integrated/widgets/screen_size.dart';
 
 class LoginForm extends StatefulWidget {
@@ -108,11 +111,11 @@ class _LoginFormState extends State<LoginForm> {
             Container(
               height: 40,
               width: ScreenSize.isDesktop(context) ? contWidth / 1.38 : screenWidth / 1.38,
-              decoration: BoxDecoration(
-                  color: Colors.black12,
-                  borderRadius: BorderRadius.circular(5.0)
-              ),
               child: FlatButton(
+                color: Palette.blueButton,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => NavScreen()));
                 },
@@ -121,8 +124,8 @@ class _LoginFormState extends State<LoginForm> {
                   style: TextStyle(
                     fontSize: 15,
                     fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w300,
-                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -213,12 +216,12 @@ class _LoginFormState extends State<LoginForm> {
                     width: ScreenSize.isDesktop(context) ? contWidth * 0.35 : screenWidth * .35,
                     color: Colors.transparent,
                     child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.black12,
-                          borderRadius: BorderRadius.circular(5.0)
-                      ),
                       //child: Center(
                       child: FlatButton(
+                        color: Palette.blueButton,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
                         onPressed: () {},
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -241,8 +244,8 @@ class _LoginFormState extends State<LoginForm> {
                               style: TextStyle(
                                 fontSize: 13,
                                 fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w300,
-                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           ],
@@ -257,12 +260,12 @@ class _LoginFormState extends State<LoginForm> {
                     width: ScreenSize.isDesktop(context) ? contWidth * 0.35 : screenWidth * .35,
                     color: Colors.transparent,
                     child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.black12,
-                          borderRadius: BorderRadius.circular(5.0)
-                      ),
                       child: Center(
                         child: FlatButton(
+                          color: Palette.blueButton,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                          ),
                           onPressed: () {},
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -285,8 +288,8 @@ class _LoginFormState extends State<LoginForm> {
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w300,
-                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
                                 ),
                               ),
                             ],
@@ -302,17 +305,18 @@ class _LoginFormState extends State<LoginForm> {
             Container(
               height: 40,
               width: ScreenSize.isDesktop(context) ? contWidth / 1.38 : screenWidth / 1.38,
-              decoration: BoxDecoration(
-                  color: Colors.black12,
-                  borderRadius: BorderRadius.circular(5.0)
-              ),
               child: FlatButton(
+                color: Palette.blueButton,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => null //SignUp()
-                      )
+                          builder: (context) => Register()
+                          //Navigator.push(context, MaterialPageRoute(builder: (context) => NavScreen()));
+                      ),
                   );
                 },
                 child: Text(
@@ -320,8 +324,8 @@ class _LoginFormState extends State<LoginForm> {
                   style: TextStyle(
                     fontSize: 15,
                     fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w300,
-                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),

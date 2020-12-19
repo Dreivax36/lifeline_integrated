@@ -34,8 +34,10 @@ class Palette {
   static const Color bluetheme = Color.fromRGBO(5, 96, 144, 1);
   static const Color bluelight = Color.fromRGBO(10, 108, 158, 1);
 
+  static const Color blueButton = Color.fromRGBO(81, 159, 199, 1);
   static const Color greenButton = Color.fromRGBO(124, 221, 149, 1);
   static const Color redButton = Color.fromRGBO(255, 76, 88, 1);
+  static const Color redAccentButton = Color.fromRGBO(255, 119, 119, 1);
 
   static const Color online = Color.fromRGBO(134, 194, 86, 1);
 
